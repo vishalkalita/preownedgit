@@ -14,8 +14,8 @@ const Add = ({token}) => {
    const [name, setName] = useState("");
    const [description, setDescription] = useState("");
    const [price, setPrice] = useState("");
-   const [category, setCategory] = useState("Men");
-   const [subCategory, setSubCategory] = useState("Topwear");
+   const [category, setCategory] = useState("Washing Machine");
+   const [subCategory, setSubCategory] = useState("Top Load");
    const [bestseller, setBestseller] = useState(false);
    const [sizes, setSizes] = useState([]);
 
@@ -100,18 +100,18 @@ const Add = ({token}) => {
             <div>
               <p className='mb-2'>Product category</p>
               <select onChange={(e) => setCategory(e.target.value)} className='w-full px-3 py-2'>
-                  <option value="Men">Men</option>
-                  <option value="Women">Women</option>
-                  <option value="Kids">Kids</option>
+                  <option value="Washing Machine">Washing Machine</option>
+                  <option value="Refrigerator">Refrigerator</option>
+                  <option value="Combo">Combo</option>
               </select>
             </div>
 
             <div>
               <p className='mb-2'>Sub category</p>
               <select onChange={(e) => setSubCategory(e.target.value)} className='w-full px-3 py-2'>
-                  <option value="Topwear">Topwear</option>
-                  <option value="Bottomwear">Bottomwear</option>
-                  <option value="Winterwear">Winterwear</option>
+                  <option value="Top Load">Top Load</option>
+                  <option value="Front Load">Front Load</option>
+                  <option value="Double Door">Double Door</option>
               </select>
             </div>
 
@@ -125,24 +125,24 @@ const Add = ({token}) => {
         <div>
           <p className='mb-2'>Product Sizes</p>
           <div className='flex gap-3'>
-            <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter( item => item !== "S") : [...prev,"S"])}>
-              <p className={`${sizes.includes("S") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>S</p>
+            <div onClick={()=>setSizes(prev => prev.includes("TL") ? prev.filter( item => item !== "TL") : [...prev,"TL"])}>
+              <p className={`${sizes.includes("TL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>TL</p>
             </div>
             
-            <div onClick={()=>setSizes(prev => prev.includes("M") ? prev.filter( item => item !== "M") : [...prev,"M"])}>
-              <p className={`${sizes.includes("M") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>M</p>
+            <div onClick={()=>setSizes(prev => prev.includes("FL") ? prev.filter( item => item !== "FL") : [...prev,"FL"])}>
+              <p className={`${sizes.includes("FL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>FL</p>
             </div>
 
-            <div onClick={()=>setSizes(prev => prev.includes("L") ? prev.filter( item => item !== "L") : [...prev,"L"])}>
-              <p className={`${sizes.includes("L") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>L</p>
+            <div onClick={()=>setSizes(prev => prev.includes("DD") ? prev.filter( item => item !== "DD") : [...prev,"DD"])}>
+              <p className={`${sizes.includes("DD") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>DD</p>
             </div>
 
-            <div onClick={()=>setSizes(prev => prev.includes("XL") ? prev.filter( item => item !== "XL") : [...prev,"XL"])}>
-              <p className={`${sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>XL</p>
+            <div onClick={()=>setSizes(prev => prev.includes("SD") ? prev.filter( item => item !== "SD") : [...prev,"SD"])}>
+              <p className={`${sizes.includes("SD") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>SD</p>
             </div>
 
-            <div onClick={()=>setSizes(prev => prev.includes("XXL") ? prev.filter( item => item !== "XXL") : [...prev,"XXL"])}>
-              <p className={`${sizes.includes("XXL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>XXL</p>
+            <div onClick={()=>setSizes(prev => prev.includes("TD") ? prev.filter( item => item !== "TD") : [...prev,"TD"])}>
+              <p className={`${sizes.includes("TD") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>TD</p>
             </div>
           </div>
         </div>
